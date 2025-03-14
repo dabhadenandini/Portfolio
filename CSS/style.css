@@ -1,0 +1,624 @@
+:root {
+  --mainfont: "Raleway", serif;
+  --buttoncolor: rgb(75, 82, 128);
+}
+* {
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid; */
+}
+/* Nav SEction  */
+.navbar {
+  font-family: var(--mainfont);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: rgb(75, 82, 128);
+}
+.navbar-nav .nav-link {
+  position: relative;
+  color: rgb(75, 82, 128);
+  transition: color 0.3s ease-in-out;
+}
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background-color: rgb(75, 82, 128);
+  transition: width 0.3s ease-in-out;
+}
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+.navbar-nav .nav-link:hover {
+  color: rgb(75, 82, 128);
+}
+html,
+body {
+  overflow-x: hidden;
+}
+.container-fluid {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.navbar {
+  width: 100%;
+  padding: 10px 0;
+}
+/* Hero-SEction  */
+#Hero-SEction {
+  background-color: rgb(254, 248, 245);
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+/* Fix Timeline Alignment */
+.timeline-item {
+  width: 45%;
+}
+#Hero-SEction h2 {
+  font-family: var(--mainfont);
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 22px;
+  color: rgb(160, 143, 134);
+}
+#Hero-SEction h1 {
+  font-family: var(--mainfont);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 58px;
+  color: rgb(78, 64, 57);
+}
+#Hero-SEction span {
+  font-family: var(--mainfont);
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 35px;
+  color: rgb(75, 82, 128);
+  display: inline-block;
+}
+/* Animation for each letter */
+.letter {
+  opacity: 0;
+  display: inline-block;
+  animation: fadeIn 1s forwards;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#Hero-SEction p {
+  font-family: var(--mainfont);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: rgb(160, 143, 134);
+}
+#Hero-SEction button {
+  background-color: rgb(249, 221, 197);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+#Hero-SEction button a {
+  font-family: var(--mainfont);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: rgb(78, 64, 57);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+/* Hover and Focus Effects */
+#Hero-SEction button:hover,
+#Hero-SEction button:focus {
+  background-color: rgb(75, 82, 128);
+}
+#Hero-SEction button:hover a,
+#Hero-SEction button:focus a {
+  color: rgb(249, 221, 197);
+}
+/* About SEction  */
+.clip-image {
+  width: 300px;
+  height: 200px;
+  border-radius: 100px 0px 100px 0px;
+}
+#About-SEction h1 {
+  font-family: var(--mainfont);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 43px;
+  color: rgb(78, 64, 57);
+}
+#About-SEction p {
+  font-family: var(--mainfont);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: rgb(160, 143, 134);
+}
+#About-icons i {
+  color: rgb(75, 82, 128);
+}
+/* Education SEction  */
+#Education-Section {
+  background-color: rgb(254, 248, 245);
+}
+#Education-Section h1 {
+  font-family: var(--mainfont);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 43px;
+  color: rgb(78, 64, 57);
+  padding-top: 70px;
+  padding-bottom: 50px;
+}
+#Education-Section h3 {
+  border: 1px solid;
+  font-family: var(--mainfont);
+  background-color: rgb(75, 82, 128);
+  color: white;
+  border-radius: 20px;
+}
+#Education-Section h4 {
+  font-family: var(--mainfont);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  color: black;
+}
+#Education-Section p {
+  font-family: var(--mainfont);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  color: rgb(75, 82, 128);
+}
+/* Timeline Container */
+.timeline {
+  position: relative;
+  margin: 50px auto;
+  max-width: 800px;
+}
+/* Animation (No Change) */
+.timeline-item {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-in-out;
+}
+.timeline-item.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Skills-Section  */
+#Skills-Section h1 {
+  font-family: var(--mainfont);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 43px;
+  color: rgb(78, 64, 57);
+  padding-top: 70px;
+  padding-bottom: 50px;
+}
+#Skills-Section h3 {
+  font-family: var(--mainfont);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: rgb(75, 82, 128);
+}
+.skill-img {
+  width: 150px;
+  height: 80px;
+  object-fit: contain;
+}
+.flip-card {
+  perspective: 1000px;
+  position: relative;
+  width: 200px;
+  height: 280px;
+}
+.flip-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+.flip-card:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+/* Flip front and back */
+.flip-front,
+.flip-back {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.flip-front {
+  background: white;
+  z-index: 2;
+}
+.flip-back {
+  transform: rotateY(180deg);
+  background: rgb(254, 248, 245);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Hide progress initially */
+.flip-back .progress-circle {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.flip-card:hover .progress-circle {
+  opacity: 1;
+  transform: scale(1);
+  animation: progressAnimation 1s forwards;
+}
+@keyframes progressAnimation {
+  from {
+    background: conic-gradient(#4caf50 0%, #ddd 0%);
+  }
+  to {
+    background: conic-gradient(
+      #4caf50 var(--progress, 0%),
+      #ddd var(--progress, 0%)
+    );
+  }
+}
+/* Circular Progress Bar using SVG */
+.progress-circle {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+.progress-circle svg {
+  transform: rotate(-90deg);
+}
+.progress-circle circle {
+  fill: none;
+  stroke-width: 8;
+  stroke-linecap: round;
+}
+.progress-circle .bg {
+  stroke: rgb(255, 243, 205);
+}
+.progress-circle .progress {
+  stroke: rgb(75, 82, 128);
+  stroke-dasharray: 251.2;
+  stroke-dashoffset: 251.2;
+  transition: stroke-dashoffset 1s ease-in-out;
+}
+.progress-circle .percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  font-weight: bold;
+}
+/* Project Section  */
+#Projects {
+  padding: 2rem 0;
+  padding-top: 140px;
+  margin-top: 250px;
+}
+
+.box7 {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.box7:hover {
+  transform: translateY(-5px);
+}
+
+.box7:before,
+.box7:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease;
+}
+
+.box7:before {
+  background: rgba(11, 33, 47, 0.9);
+  opacity: 0;
+  z-index: 1;
+}
+
+.box7:hover:before {
+  opacity: 1;
+}
+
+.box7:after {
+  background: rgba(255, 255, 255, 0.3);
+  border: 2px solid #0dab76;
+  left: 170%;
+  transform: skewX(45deg);
+  opacity: 1;
+  transition: all 1s ease;
+  z-index: 1;
+}
+
+.box7:hover:after {
+  left: -170%;
+}
+
+.box7 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.box7 img {
+  width: 100%;
+  height: 250px;
+  /* Set a fixed height to maintain ratio */
+  object-fit: cover;
+  /* Ensures the image covers the div without distortion */
+  display: block;
+}
+
+.box7 .box-content {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+.box7:hover .box-content {
+  bottom: 30%;
+}
+
+.box7 .title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.box7 .post {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.box7 .icon {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.box7 .icon li {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+.box7 .icon li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #007bff;
+  color: #fff;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+
+.box7 .icon li a:hover {
+  transform: rotate(360deg);
+  background: #0a7d59;
+}
+#Project-Section button {
+  background-color: rgb(249, 221, 197);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+#Project-Section button a {
+  font-family: var(--mainfont);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: rgb(78, 64, 57);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+/* Hover and Focus Effects */
+#Project-Section button:hover,
+#Project-Section button:focus {
+  background-color: rgb(75, 82, 128);
+}
+#Project-Section button:hover a,
+#Project-Section button:focus a {
+  color: rgb(249, 221, 197);
+}
+/* Contact-Section  */
+#Contact {
+  background-color: rgb(248, 249, 250);
+}
+#Contact-section span {
+  font-family: var(--mainfont);
+  font-size: 16px;
+  font-weight: 400;
+  padding-top: 27px;
+}
+/* Form  */
+#Form h1 {
+  font-family: var(--mainfont);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 43px;
+  color: rgb(78, 64, 57);
+  padding-top: 70px;
+  padding-bottom: 50px;
+}
+#Form label {
+  font-family: var(--mainfont);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: rgb(160, 143, 134);
+}
+#Form button {
+  background-color: rgb(249, 221, 197);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+#Form button a {
+  font-family: var(--mainfont);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: rgb(78, 64, 57);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+/* Hover and Focus Effects */
+#Form button:hover,
+#Form button:focus {
+  background-color: rgb(75, 82, 128);
+}
+#Form button:hover a,
+#Form button:focus a {
+  color: rgb(249, 221, 197);
+}
+/* Footer SEction  */
+#Footer {
+  background-color: rgb(254, 248, 245);
+}
+#Footer p {
+  font-family: var(--mainfont);
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 15px;
+  color: black;
+}
+#Footer p span {
+  font-family: var(--mainfont);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 15px;
+  color: rgb(75, 82, 128);
+}
+@media only screen and (min-width: 768px) {
+  /* Education-section  */
+  .timeline {
+    position: relative;
+    margin: 50px auto;
+    max-width: 800px;
+  }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: rgb(75, 82, 128);
+    transform: translateX(-50%);
+  }
+  .timeline-item {
+    width: 45%;
+    padding: 20px;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+  }
+  .timeline-item:nth-child(even) {
+    left: 50%;
+    text-align: left;
+  }
+  .timeline-item::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    width: 15px;
+    height: 15px;
+    background: rgb(75, 82, 128);
+    border-radius: 50%;
+    border: 3px solid white;
+    z-index: 10;
+  }
+  .timeline-item:nth-child(odd)::before {
+    right: -10px;
+  }
+  .timeline-item:nth-child(even)::before {
+    left: -10px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #Hero-Content {
+    padding-top: 40px;
+  }
+  /* About Section  */
+  #About-SEction h1 {
+    font-size: 48px;
+    line-height: 58px;
+  }
+
+  /* Education-SEction  */
+  #Education-Section h1 {
+    font-size: 48px;
+    line-height: 58px;
+  }
+  #Skills-Section h1 {
+    font-size: 48px;
+    line-height: 58px;
+  }
+  /* Contact Section  */
+  #Form h1 {
+    font-size: 48px;
+    line-height: 58px;
+  }
+  /* Project Section  */
+  #Project-Section h1 {
+    font-family: var(--mainfont);
+    font-size: 48px;
+    line-height: 58px;
+  }
+}
+@media only screen and (min-width: 1220px) {
+  #Hero-Content {
+    padding-top: 90px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  #Hero-Content {
+    padding-top: 90px;
+  }
+}
